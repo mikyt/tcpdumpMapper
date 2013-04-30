@@ -1,0 +1,16 @@
+This tool creates a DOT representation of a newtwork, using the information 
+that it can obtain from the packets observed in the network itself, as returned
+by tcpdump.
+
+For running, it requires:
+ * tcpdump
+ * graphviz, xdot or some other kind of .dot files viewer/renderer
+ * glib-2.0
+
+For being compiled, it requires:
+ * gcc
+ * glib-2.0 (devel)
+ * flex
+
+The tool is distributed according to the terms of the GPLv2 license, that can 
+be found in the LICENSE file.
