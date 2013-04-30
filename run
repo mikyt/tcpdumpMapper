@@ -1,0 +1,11 @@
+#!/bin/bash
+#TCPDUMPFILTER="src and dst net 10" #For monitoring the class A 10.0.0.0 net
+TCPDUMPFILTER=""
+SLEEPTIME=5
+
+echo -e "\nThe current TCPDUMPFILTER is \"$TCPDUMPFILTER\"\n\n"
+echo -e "$SLEEPTIME seconds before real work starts"
+
+sleep $SLEEPTIME
+
+sudo tcpdump -n -i eth0 $TCPDUMPFILTER | tee network.log | ./tcpdumpMapper
